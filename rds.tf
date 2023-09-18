@@ -35,7 +35,7 @@ resource "aws_db_instance" "default" {
 
   db_subnet_group_name = aws_db_subnet_group.database.name
 
-  storage_type = local.vars.mysql_instance_type
+  storage_type = local.vars.msq_stograte_type
   allocated_storage = local.vars.mysql_allocated_storage
 
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
