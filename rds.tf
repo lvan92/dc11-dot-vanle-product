@@ -5,6 +5,7 @@ resource "aws_db_subnet_group" "database" {
 }
 resource "aws_security_group" "rds_sg" {
   name = "rds_sg"
+  vpc_id = data.aws_vpc.selected.id
   ingress {
     from_port = 3306
     to_port   = 3306
