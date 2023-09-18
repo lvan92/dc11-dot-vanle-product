@@ -1,5 +1,5 @@
 "mysql_instance_type": "db.t2.micro"
-"mysql_database": "test_ops"
+"mysql_database": "testops"
 "mysql_username": "root"
 "mysql_password": "123456"
 "mysql_port": 3306
