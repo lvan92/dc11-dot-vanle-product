@@ -17,17 +17,17 @@ data "aws_subnet" "all" {
   id       = each.value
 }
 
-data "aws_ami" "vitrual" {
-  most_recent = true
-  filter {
-    name = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-  }
-  filter {
-    name = "virtualization-type"
-    values = [ "hvm" ]
-  }
-}
+# data "aws_ami" "vitrual" {
+#   most_recent = true
+#   filter {
+#     name = "name"
+#     values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+#   }
+#   filter {
+#     name = "virtualization-type"
+#     values = [ "hvm" ]
+#   }
+# }
 
 locals {
   config_file_name      = "${terraform.workspace}.tfvars"
