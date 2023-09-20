@@ -45,7 +45,7 @@ resource "aws_security_group" "vanle_ec2" {
 resource "aws_network_interface" "vanle_ec2" {
   count           = local.vars.ec2_number_instance_launch
   subnet_id       = local.subnet_public[count.index].id
-  security_groups = [aws_security_group.ec2.id]
+  security_groups = [aws_security_group.vanle_ec2.id]
 }
 
 resource "aws_key_pair" "ec2_key_pair" {
