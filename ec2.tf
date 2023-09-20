@@ -93,7 +93,7 @@ resource "aws_volume_attachment" "attachment_ebs" {
 resource "aws_eip" "ec2_eip" {
   count = local.vars.ec2_number_instance_launch
   instance = aws_instance.ec2_instance[count.index].id
-  domain = "devposExample"
+  domain = "vpc"
 
   tags = {
     name = "devops-vanle-eip-${count.index}"
