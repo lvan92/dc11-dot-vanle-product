@@ -85,7 +85,7 @@ resource "aws_ebs_volume" "ebs_volume" {
 
 resource "aws_volume_attachment" "attachment_ebs" {
   count = local.vars.ec2_number_instance_launch
-  device_name = "dev/sda2"
+  device_name = "/dev/sda2"
   volume_id = aws_ebs_volume.ebs_volume[count.index].id
   instance_id = aws_instance.ec2_instance[count.index].id
 }
